@@ -1,51 +1,419 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-theme="dark" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>okedeh</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div>
-        <nav id="navbar" class="flex flex-wrap justify-between m-4 ">
-            <b>LOGO</b>
-            <ul id="navbar-nav " class="flex gap-3">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#teck">Teck</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <b>Follow me</b>
-        </nav>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .oke {
+        scroll-margin-top: 70px; 
+      }
+      
+      .marquee-wrapper {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+      }
 
-        <div id="main">
-            <div id="home">
-                <div class="flex">
-                    <div id="content">
-                    </div>
-                    <div id="gambar">
-                    </div>
-                </div>
-            </div>
-            <div id="about">
+      .marquee {
+        display: flex;
+        white-space: nowrap;
+        animation: marquee 20s linear infinite;
+      }
 
-            </div>
-            <div id="teck">
-
-            </div>
-            <div id="project">
-
-            </div>
-            <div id="contact">
-
-            </div>
+      .marquee img {
+        margin-right: 1rem;
+        width: 64px;
+        height: 64px;
+      }
+    </style>
+  </head>
+  <body class="bg-base-200">
+    <div class="fixed navbar bg-base-100" style="z-index: 100;">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About me </a></li>
+            <li><a href="#teck">Teck</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
+        <a class="text-xl btn btn-ghost">DUH LAA</a>
+      </div>
+      <div class="hidden navbar-center lg:flex">
+        <ul class="px-1 menu menu-horizontal">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About me </a></li>
+          <li><a href="#teck">Teck</a></li>
+          <li><a href="#project">Project</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <a target="_blank" class="mx-2 text-sm btn btn-ghost" href="https://github.com/dilsdev"
+          >Github</a
+        >
+      </div>
+    </div>
+    <div class="container p-4 mx-auto">
+      <div id="main">
+        <div id="hero" class="min-h-screen hero oke">
+          <div class="flex-col hero-content lg:flex-row-reverse">
+            <img
+              src="image/gw.jpg"
+              class="max-w-sm rounded-lg shadow-2xl"
+            />
+            <div>
+              <h1 class="text-5xl font-bold">Hi 👋, My name is Abdil</h1>
+              <p class="py-6">
+                Welcome to my website. This is my portfolio website.
+                scroll down to see more fun!!
+              </p>
+              <a href="#about" class="btn btn-primary">Get Started</a>
+            </div>
+          </div>
+        </div>
+        <div id="about" class="min-h-screen hero bg-base-200 oke">
+          <div class="text-center hero-content">
+            <div class="max-w-2xl">
+              <h1 class="text-5xl font-bold">Hello Guys</h1>
+              <p class="py-6">
+                Saya Moch Abdil A'la dari Jember, Jawa Timur. Saat ini, saya
+                pelajar kelas 11 di SMKN 6 JEMBER dengan fokus pada Rekayasa
+                Perangkat Lunak. Saya sangat menyukai coding dan bercita-cita
+                menjadi Full Stack Developer. Selain belajar, saya aktif di
+                organisasi HSJR. Saya selalu bersemangat dalam menambah
+                pengetahuan dan keterampilan di bidang teknologi. Terima kasih
+                telah mengunjungi website saya!
+              </p>
+            </div>
+          </div>
+        </div>
+        <section id="teck" class="relative mb-12 text-center oke">
+          <h1 class="mb-4 text-3xl font-bold">My Tech Stack</h1>
+          <p class="mb-8 text-lg">
+            Technologies and Tools I've been working with recently
+          </p>
+          <div class="overflow-hidden">
+            <div class="marquee-wrapper">
+              <div class="marquee" id="marquee">
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+                  alt="HTML5"
+                  class="icon"
+                />
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+                  alt="CSS3"
+                  class="icon"
+                />
+                <img
+                  src="https://camo.githubusercontent.com/3e5344a2965e786497ceb575ad67d2c64d412bb9683da05791edf424a0e40734/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f66697265626173652f66697265626173652d69636f6e2e737667"
+                  alt="FIREBASE"
+                  class="icon"
+                />
+                <img
+                  src="https://camo.githubusercontent.com/a682e207ce9939518c8617c6340b1bf8b1769b30a9f1b45d27d67fd64af1d0f2/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f666c7574746572696f2f666c7574746572696f2d69636f6e2e737667"
+                  alt="FLUTTER"
+                  class="icon"
+                />
+                <img
+                  src="https://camo.githubusercontent.com/fcafa5ebc1f5f789ae7d012a3ecd8fe7bda49516591caf7c37698f764165d880/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6769742d73636d2f6769742d73636d2d69636f6e2e737667"
+                  alt="git"
+                  class="icon"
+                />
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                  alt="JAVA SCRIPT"
+                  class="icon"
+                />
+                <img
+                  src="https://laravel.com/img/logomark.min.svg"
+                  alt="LARAVEL"
+                  class="icon"
+                />
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
+                  alt="MONGO DB"
+                  class="icon"
+                />
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+                  alt="MYSQL"
+                  class="icon"
+                />
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
+                  alt="NODE JS"
+                  class="icon"
+                />
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg"
+                  alt="EXPRESS"
+                  class="icon"
+                />
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
+                  alt="PHP"
+                  class="icon"
+                />
+                <img
+                  src="https://camo.githubusercontent.com/a13ca5b988ada41839ebe4f88455e63419a1b56fcb5eda207794cd1649a61d2c/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f676574706f73746d616e2f676574706f73746d616e2d69636f6e2e737667"
+                  alt="POSTMAN"
+                  class="icon"
+                />
+                <img
+                  src="https://camo.githubusercontent.com/0568e2de313626b2bd9b96f326941b012d45e9a4db1a23aa78bd8036207e57f8/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f7461696c77696e646373732f7461696c77696e646373732d69636f6e2e737667"
+                  alt="TAILWIND"
+                  class="icon"
+                />
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg"
+                  alt="Vue"
+                  class="icon"
+                />
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
+                  alt="Bootstrap"
+                  class="icon"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="project" class="text-center oke">
+          <h2 class="mb-4 text-3xl font-bold">Projects</h2>
+          <p class="mb-8 text-lg">Things I've built so far</p>
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
+            <div
+              class="max-w-lg mx-auto overflow-hidden bg-gray-800 rounded-lg shadow-lg"
+            >
+              <img
+                src="image/cafe6.png"
+                alt="Project Image"
+                class="object-cover w-full h-48"
+              />
+              <div class="p-4">
+                <h3 class="mb-2 text-xl font-semibold">Cafe SMKN 6 Jember</h3>
+                <p class="mb-4 text-gray-400">
+                  This is an application for ordering food online at Cafe 6 SMKN
+                  6 Jember. You can pay directly or pay online.
+                </p>
+                <p class="mb-4 text-gray-400">
+                  <strong>Tech stack:</strong> LARAVEL, Live Wire, Bootstrap
+                </p>
+                <div class="flex justify-between">
+                  <a target="_blank"
+                    href="https://cafe6.dils.my.id"
+                    class="px-4 py-2 ml-auto text-white bg-blue-500 rounded"
+                    >Live Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-w-lg mx-auto overflow-hidden bg-gray-800 rounded-lg shadow-lg"
+            >
+              <img
+                src="image/ewallet.png"
+                alt="Project Image"
+                class="object-cover w-full h-48"
+              />
+              <div class="p-4">
+                <h3 class="mb-2 text-xl font-semibold">E Wall Six</h3>
+                <p class="mb-4 text-gray-400">
+                  This is an application for storing your digital money, you can
+                  buy goods by paying using this E Wallet.
+                </p>
+                <p class="mb-4 text-gray-400">
+                  <strong>Tech stack:</strong> HTML, CSS, JavaScript, PHP
+                </p>
+                <div class="flex justify-between">
+                  <a target="_blank"
+                    href="https://ewallet.dils.my.id"
+                    class="px-4 py-2 ml-auto text-white bg-blue-500 rounded"
+                    >Live Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="contact" class="oke">
+          <div class="max-w-screen-md px-4 py-8 mx-auto lg:py-16">
+            <h2
+              class="mb-4 text-4xl font-extrabold tracking-tight text-center text-gray-900 dark:text-white"
+            >
+              Contact Us
+            </h2>
+            <p
+              class="mb-8 font-light text-center text-gray-500 lg:mb-16 dark:text-gray-400 sm:text-xl"
+            >
+              Write your message for me, or do you want to collaborate with me?
+              You can order cream through here!!
+            </p>
+            <form action="#" class="space-y-8">
+              <div>
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >Your email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                  placeholder="name@example.com"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="subject"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  class="block w-full p-3 text-sm text-gray-900 border border-gray-300 rounded-lg shadow-sm bg-gray-50 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div class="sm:col-span-2">
+                <label
+                  for="message"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+                  >Your message</label
+                >
+                <textarea
+                  id="message"
+                  rows="6"
+                  class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                  placeholder="Leave a comment..."
+                ></textarea>
+              </div>
+              <button type="submit" class="btn">Send message</button>
+            </form>
+          </div>
+        </section>
+      </div>
     </div>
 
-    <div id="footer">
+    <footer class="p-10 footer bg-base-300 text-base-content">
+      <nav>
+        <h6 class="footer-title">Contact</h6>
+        <a class="link link-hover">GitHub</a>
+        <a class="link link-hover">WhatsApp</a>
+        <a class="link link-hover">Instagram</a>
+        <a class="link link-hover">Telegram</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Company</h6>
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Social</h6>
+        <div class="grid grid-flow-col gap-4">
+          <a
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="fill-current"
+            >
+              <path
+                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+              ></path></svg
+          ></a>
+          <a
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="fill-current"
+            >
+              <path
+                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+              ></path></svg
+          ></a>
+          <a
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="fill-current"
+            >
+              <path
+                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+              ></path></svg
+          ></a>
+        </div>
+      </nav>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const marquee = document.getElementById("marquee");
+        const icons = marquee.querySelectorAll(".icon");
+        const iconCount = icons.length;
+        let totalWidth = 0;
 
-    </div>
-</body>
+        icons.forEach((icon) => {
+          totalWidth += icon.offsetWidth + 16;
+        });
+
+        while (marquee.offsetWidth < window.innerWidth + totalWidth) {
+          icons.forEach((icon) => {
+            const clone = icon.cloneNode(true);
+            marquee.appendChild(clone);
+          });
+        }
+
+        let offset = 0;
+        const speed = 2;
+
+        function animateMarquee() {
+          offset -= speed;
+          if (offset <= -totalWidth) {
+            offset = 0;
+          }
+          marquee.style.transform = `translateX(${offset}px)`;
+          requestAnimationFrame(animateMarquee);
+        }
+
+        animateMarquee();
+      });
+    </script>
+  </body>
 </html>
