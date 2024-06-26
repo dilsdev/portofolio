@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "public/index.js",
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch"
+    "dev": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch",
+    "build:css": "npx tailwindcss -i ./src/input.css -o ./public/style.css --minify"
   },
   "author": "Moch Abdil A'la",
   "license": "ISC",

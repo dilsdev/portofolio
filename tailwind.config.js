@@ -7,12 +7,13 @@ module.exports = {
   plugins: [require("daisyui")],
   daisyui: {
     themes: false,
-    themes: ["light", "dark", "cupcake"],
+    themes: ["lofi", "dark"],
     base: true,
     styled: true,
-    utils: true,
+    utils: true, 
     prefix: "",
     logs: true,
     themeRoot: ":root",
   },
+  purge: ['./public/**/*.html', './src/**/*.js'],
 };

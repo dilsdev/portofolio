@@ -4,9 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>okedeh</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
+  <meta
+  name="description"
+  content="Portfolio Moch Abdil A'la">
+  <title>Portofolio Abdil</title>
+  <link rel="icon" href="image/oke.avif">
+  <link rel="icon" href="image/oke.png">
+<link rel="stylesheet" href="style.css">  <style>
     .oke {
       scroll-margin-top: 70px;
     }
@@ -32,15 +36,15 @@
   </style>
 </head>
 
-<body class="bg-base-200">
-  <div class="fixed navbar bg-base-100" style="z-index: 100;">
+<body>
+  <div class="fixed navbar bg-base-100" style="z-index: 100; width: 100vw;">
     <div class="navbar-start">
       <div class="dropdown">
-        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <button tabindex="0" role="button" class="btn btn-ghost lg:hidden" id="Navigation" aria-label="labelNav">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
           </svg>
-        </div>
+        </button>
         <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">About me </a></li>
@@ -49,7 +53,7 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-      <a class="w-16 btn btn-ghost"><img src="image/oke.png" alt=""></a>
+      <a href="#" class="w-16 btn btn-ghost"><img id="logo" aria-label="labelLogo" style="width: 30px; height: 30px;" src="image/oke.avif" alt=""></a>
     </div>
     <div class="hidden navbar-center lg:flex">
       <ul class="px-1 menu menu-horizontal">
@@ -61,25 +65,50 @@
       </ul>
     </div>
     <div class="navbar-end">
+      <label class="swap swap-rotate" id="theme" aria-label="labelTheme">
+        <!-- this hidden checkbox controls the state -->
+        <input type="checkbox" class="theme-controller" value="lofi" />
+      
+        <!-- sun icon -->
+        <svg
+          class="swap-off h-10 w-10 fill-current"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24">
+          <path
+            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+        </svg>
+      
+        <!-- moon icon -->
+        <svg
+          class="swap-on h-10 w-10 fill-current"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24">
+          <path
+            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+        </svg>
+      </label>  
       <a target="_blank" class="mx-2 text-sm btn btn-ghost" href="https://github.com/dilsdev">Github</a>
     </div>
   </div>
   <div class="container p-4 mx-auto">
-    <div id="main">
+    <div id="main" style="padding-top: 60px;">
       <div id="hero" class="min-h-screen hero oke">
         <div class="flex-col hero-content lg:flex-row-reverse">
-          <img src="image/gw.png" class="max-w-sm rounded-lg " />
-          <div>
-            <h1 class="text-5xl font-bold">Hi 👋, My name is Abdil</h1>
-            <p class="py-6">
-              Welcome to my website. This is my portfolio website.
-              scroll down to see more fun!!
-            </p>
-            <a href="#about" class="btn btn-primary">Get Started</a>
-          </div>
+          <picture>
+            <source srcset="image/gw.avif" type="image/avif">
+            <source srcset="image/gw.webp" type="image/webp">
+            <img style="width: 384px; height: 384px;" rel="preload" src="image/gw.png" class="object-contain lg:object-cover rounded-lg max-w-full h-auto" alt="Description of the image">
+          </picture>
+            <div class="lg:w-1/2 lg:order-1 px-4">
+              <h1 class="text-5xl font-bold mb-4">Hi 👋, My name is Abdil</h1>
+              <p class="py-6">
+                Welcome to my website. This is my portfolio website. Scroll down to see more fun!!
+              </p>
+              <a href="#about" class="btn btn-primary">Get Started</a>
+            </div>
         </div>
       </div>
-      <div id="about" class="min-h-screen hero bg-base-200 oke">
+      <div id="about" class="min-h-screen hero oke">
         <div class="text-center hero-content">
           <div class="max-w-2xl">
             <h1 class="text-5xl font-bold">Hello Guys</h1>
@@ -103,48 +132,64 @@
         <div class="overflow-hidden">
           <div class="marquee-wrapper">
             <div class="marquee" id="marquee">
-              <img
+              <img 
+              style="width: 64px; height: 64px;"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
                 alt="HTML5" class="icon" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+              <img 
+              style="width: 64px; height: 64px;" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
                 alt="CSS3" class="icon" />
-              <img
+              <img 
+              style="width: 64px; height: 64px;"
                 src="https://camo.githubusercontent.com/3e5344a2965e786497ceb575ad67d2c64d412bb9683da05791edf424a0e40734/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f66697265626173652f66697265626173652d69636f6e2e737667"
                 alt="FIREBASE" class="icon" />
-              <img
+              <img 
+              style="width: 64px; height: 64px;"
                 src="https://camo.githubusercontent.com/a682e207ce9939518c8617c6340b1bf8b1769b30a9f1b45d27d67fd64af1d0f2/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f666c7574746572696f2f666c7574746572696f2d69636f6e2e737667"
                 alt="FLUTTER" class="icon" />
-              <img
+              <img 
+              style="width: 64px; height: 64px;"
                 src="https://camo.githubusercontent.com/fcafa5ebc1f5f789ae7d012a3ecd8fe7bda49516591caf7c37698f764165d880/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6769742d73636d2f6769742d73636d2d69636f6e2e737667"
                 alt="git" class="icon" />
-              <img
+              <img 
+              style="width: 64px; height: 64px;"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
                 alt="JAVA SCRIPT" class="icon" />
-              <img src="https://laravel.com/img/logomark.min.svg" alt="LARAVEL" class="icon" />
-              <img
+              <img 
+              style="width: 64px; height: 64px;" src="https://github.com/laravel/art/blob/master/laravel-logo.png?raw=true" alt="LARAVEL" class="icon" />
+              <img 
+              style="width: 64px; height: 64px;"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
                 alt="MONGO DB" class="icon" />
-              <img
+              <img 
+              style="width: 64px; height: 64px;"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
                 alt="MYSQL" class="icon" />
-              <img
+              <img 
+              style="width: 64px; height: 64px;"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
                 alt="NODE JS" class="icon" />
-              <img
+              <img 
+              style="width: 64px; height: 64px;"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg"
                 alt="EXPRESS" class="icon" />
-              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="PHP"
+              <img 
+              style="width: 64px; height: 64px;" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="PHP"
                 class="icon" />
-              <img
+              <img 
+              style="width: 64px; height: 64px;"
                 src="https://camo.githubusercontent.com/a13ca5b988ada41839ebe4f88455e63419a1b56fcb5eda207794cd1649a61d2c/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f676574706f73746d616e2f676574706f73746d616e2d69636f6e2e737667"
                 alt="POSTMAN" class="icon" />
-              <img
+              <img 
+              style="width: 64px; height: 64px;"
                 src="https://camo.githubusercontent.com/0568e2de313626b2bd9b96f326941b012d45e9a4db1a23aa78bd8036207e57f8/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f7461696c77696e646373732f7461696c77696e646373732d69636f6e2e737667"
                 alt="TAILWIND" class="icon" />
-              <img
+              <img 
+              style="width: 64px; height: 64px;"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg"
                 alt="Vue" class="icon" />
-              <img
+              <img 
+              style="width: 64px; height: 64px;"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
                 alt="Bootstrap" class="icon" />
             </div>
@@ -156,8 +201,11 @@
         <h2 class="mb-4 text-3xl font-bold">Projects</h2>
         <p class="mb-8 text-lg">Things I've built so far</p>
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
-          <div class="max-w-lg mx-auto overflow-hidden bg-gray-800 rounded-lg shadow-lg">
-            <img src="image/cafe6.png" alt="Project Image" class="object-cover w-full h-48" />
+          <div class="max-w-lg mx-auto overflow-hidden  rounded-lg shadow-lg">
+            <picture>
+              <source srcset="image/cafe6.avif" type="image/avif">
+              <source srcset="image/cafe6.webp" type="image/webp">
+              <img src="image/cafe6.png" alt="Project Image" class="object-cover w-full h-48" />          </picture>
             <div class="p-4">
               <h3 class="mb-2 text-xl font-semibold">Cafe SMKN 6 Jember</h3>
               <p class="mb-4 text-gray-400">
@@ -173,8 +221,11 @@
               </div>
             </div>
           </div>
-          <div class="max-w-lg mx-auto overflow-hidden bg-gray-800 rounded-lg shadow-lg">
-            <img src="image/ewallet.png" alt="Project Image" class="object-cover w-full h-48" />
+          <div class="max-w-lg mx-auto overflow-hidden  rounded-lg shadow-lg">
+            <picture>
+              <source srcset="image/ewallet.avif" type="image/avif">
+              <source srcset="image/ewallet.webp" type="image/webp">
+              <img src="image/ewallet.png" alt="Project Image" class="object-cover w-full h-48" />          </picture>
             <div class="p-4">
               <h3 class="mb-2 text-xl font-semibold">E Wall Six</h3>
               <p class="mb-4 text-gray-400">
@@ -194,7 +245,7 @@
       </section>
       <section id="contact" class="oke">
         <div class="max-w-screen-md px-4 py-8 mx-auto lg:py-16">
-          <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-center text-gray-900 dark:text-white">
+          <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-center">
             Contact Us
           </h2>
           <p class="mb-8 font-light text-center text-gray-500 lg:mb-16 dark:text-gray-400 sm:text-xl">
@@ -203,23 +254,23 @@
           </p>
           <form id="contact-form" class="space-y-8">
             <div>
-              <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your
+              <label for="email" class="label">Your
                 email</label>
               <input type="email" id="email"
-                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                class="input input-bordered w-full"
                 placeholder="name@example.com" required />
             </div>
             <div>
-              <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Name</label>
+              <label for="subject" class="label">Name</label>
               <input type="text" id="name"
-                class="block w-full p-3 text-sm text-gray-900 border border-gray-300 rounded-lg shadow-sm bg-gray-50 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                class="input input-bordered w-full"
                 placeholder="Your name" required />
             </div>
             <div class="sm:col-span-2">
-              <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your
+              <label for="message" class="label">Your
                 message</label>
               <textarea id="message" rows="6"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                class="textarea textarea-xs w-full textarea-bordered"
                 placeholder="Leave a comment..."></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Send message</button>
@@ -228,24 +279,23 @@
       </section>
     </div>
   </div>
-
   <footer class="p-10 footer bg-base-300 text-base-content">
     <nav>
-      <h6 class="footer-title">Media Sosial</h6>
+      <p class="footer-title">Media Sosial</p>
       <a href="https://github.com/dilsdev" class="link link-hover">GitHub</a>
       <a href="" class="link link-hover">WhatsApp</a>
       <a href="https://www.instagram.com/dil.geometry/" class="link link-hover">Instagram</a>
       <a href="https://t.me/dilsdev" class="link link-hover">Telegram</a>
     </nav>
     <nav>
-      <h6 class="footer-title">Contact</h6>
+      <p class="footer-title">Contact</p>
       <p>Email: <a href="" class="link link-hover">abdil150507@gmail.com</a></p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/abdil-a-la-809a6130b/"
           class="link link-hover">linkedin.com/in/abdil-a-la-809a6130b/</a></p>
       <p>Github: <a href="https://github.com/dilsdev" class="link link-hover">https://github.com/dilsdev</a></p>
     </nav>
     <nav>
-      <h6 class="footer-title">Navigation</h6>
+      <p class="footer-title">Navigation</p>
       <a href="#hero">Home</a>
       <a href="#about">About me </a>
       <a href="#teck">Teck</a>
@@ -254,7 +304,7 @@
     </nav>
   </footer>
 
-  <script>
+  <script defer>
     document.addEventListener("DOMContentLoaded", function () {
       const marquee = document.getElementById("marquee");
       const icons = marquee.querySelectorAll(".icon");
